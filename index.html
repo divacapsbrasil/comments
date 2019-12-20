@@ -17,30 +17,3 @@
 
  <div class="fb-comments" class="custom-iframe" data-num-posts="2" data-width="" data-colorscheme="light" data-mobile="false"></div></body>
 
-<script type="text/javascript">
-
-
-var query = location.search.slice(1);
-var partes = query.split('&');
-var data = {};
-partes.forEach(function (parte) {
-    var chaveValor = parte.split('=');
-    var chave = chaveValor[0];
-    var valor = chaveValor[1];
-    data[chave] = valor;
-});
-  if(data['dir'] != 'undefined'){
-    
-    var url = "https://brasilmanchete.com/" + data['dir'];
-  }else{
-  
-    var url = "https://brasilmanchete.com";
-  
-  }
-  
- $(document).ready(function () {
-        $('.custom-iframe').attr('src', decodeURIComponent(url));
-});
-  
-  
-</script>
