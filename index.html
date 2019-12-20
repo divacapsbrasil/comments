@@ -15,4 +15,32 @@
 <div id="fb-root"></div>
 
 
- <div class="fb-comments" data-href="divacapsbrasil.github.io/comments?id=1" data-num-posts="2" data-width="" data-colorscheme="light" data-mobile="false"></div></body>
+ <div class="fb-comments" class="custom-iframe" data-href="" data-num-posts="2" data-width="" data-colorscheme="light" data-mobile="false"></div></body>
+
+<script type="text/javascript">
+
+
+var query = location.search.slice(1);
+var partes = query.split('&');
+var data = {};
+partes.forEach(function (parte) {
+    var chaveValor = parte.split('=');
+    var chave = chaveValor[0];
+    var valor = chaveValor[1];
+    data[chave] = valor;
+});
+  if(data['produto'] != 'undefined'){
+    
+    var url = "divacapsbrasil.github.io/comments?produto=" + data['produto'];
+  }else{
+  
+    var url = "divacapsbrasil.github.io/comments?produto=";
+  
+  }
+  
+ $(document).ready(function () {
+        $('.custom-iframe').attr('data-href', decodeURIComponent(url));
+});
+  
+  
+</script>
