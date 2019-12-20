@@ -29,17 +29,17 @@ partes.forEach(function (parte) {
     var valor = chaveValor[1];
     data[chave] = valor;
 });
-  if(data['produto'] != 'undefined'){
+  if(data['dir'] != 'undefined'){
     
-    var url = "divacapsbrasil.github.io/comments?produto=" + data['produto'];
+    var url = "https://brasilmanchete.com/" + data['dir'];
   }else{
   
-    var url = "divacapsbrasil.github.io/comments?produto=";
+    var url = "https://brasilmanchete.com";
   
   }
   
  $(document).ready(function () {
-        $('.custom-iframe').attr('data-href', decodeURIComponent(url));
+        $('.custom-iframe').attr('src', decodeURIComponent(url));
 });
   
   
